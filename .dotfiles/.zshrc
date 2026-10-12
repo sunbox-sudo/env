@@ -198,3 +198,12 @@ if ! ssh-add -l &>/dev/null; then
   ssh-add ~/.ssh/github
   ssh-add ~/.ssh/id_ed25519_Linus-PC-M 2>/dev/null
 fi
+
+# command for make a dir and cd into it
+mcd() {
+  mkdir -p -- "$1" && cd -- "$1"
+}
+
+gits() {
+	git status -s
+}
